@@ -1,0 +1,20 @@
+@use "../config/variables" as *;
+
+.c-footer {
+    h4 {
+        &::after {
+            content: "";
+            display: block;
+            height: 5px;
+            width: 60px;
+            background-color: $color-brand;
+            margin: 10px 0;
+        }
+    }
+
+    .footer-brand {
+        img {
+            width: 50px;
+        }
+    }
+}

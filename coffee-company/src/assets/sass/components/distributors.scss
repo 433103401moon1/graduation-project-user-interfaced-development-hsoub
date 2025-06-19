@@ -1,0 +1,17 @@
+@use '../config/variables' as *;
+
+.c-distributors {
+    .card {
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            background-color: $color-brand;
+            color: $color-white;
+            transform: scale(1.03);
+        }
+    }
+
+    #map {
+        border-radius: 8px;
+    }
+}

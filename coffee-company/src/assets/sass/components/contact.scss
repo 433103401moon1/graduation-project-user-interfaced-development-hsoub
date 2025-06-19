@@ -1,0 +1,23 @@
+@use "../config/variables" as *;
+
+.c-contact {
+    #map {
+        padding: 0;
+    }
+
+    #contact-options {
+        .heading-with-border-bottom {
+            padding-bottom: 10px;
+            border-bottom: 2px solid $color-grey-light !important;
+        }
+
+        textarea {
+            height: 105px !important;
+        }
+    }
+
+    .fa-lg {
+        color: $color-brand;
+        margin: 10px 0px 0px 10px;
+    }
+}

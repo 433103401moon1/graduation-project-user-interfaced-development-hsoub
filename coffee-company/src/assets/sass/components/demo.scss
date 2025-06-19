@@ -1,12 +1,156 @@
 @use "../config/variables" as *;
 
-.component-container{
+// global class
+.container {
+    margin: 30px auto;
+}
+
+.container-fluid {
+    padding: 50px 0;
+}
+
+// custom -------------------------------------------------------------------
+.heading {
+    font-size: 24px;
+    margin-bottom: 25px !important;
+}
+
+.price {
+    color: #53ccd7;
+}
+
+.custom-btn-outline-warning {
+    background-color: transparent;
+    color: #f8ad47;
+    border-color: #f8ad47;
+    border-radius: 7px !important;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: #de952f;
+        border-color: #de952f;
+    }
+}
+
+.btn:focus,
+.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.sale {
+    color: #fff;
+    background-color: #00c2c8;
+    font-weight: bold;
+    position: absolute;
+}
+
+.sale.large {
+    width: 60px;
+    height: 60px;
+    border-radius: 50% !important;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 95vw;
-    height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 130%;
+    padding: 35px;
+    top: -15px;
+    left: -15px;
+    line-height: 90%;
+    flex-direction: column;
+    transform: rotate(-25deg);
+}
+
+.add-to-cart-btn {
+    color: #53ccd7;
+    background-color: #fff;
+    font-weight: 700;
+    border-radius: 7px !important;
+    border: 1px solid #53ccd7 !important;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: #fff;
+        background-color: #000;
+        border-color: #000 !important;
+    }
+}
+
+.custom-thumbnail {
+    border: 2px solid #eef0ea;
+    padding: 8px;
+    cursor: pointer;
+
+    &:hover {
+        border-color: #53ccd7;
+    }
+
+    .sale {
+        padding: 5px 10px;
+        position: absolute;
+        left: 16px;
+        top: 14px;
+
+        &::before {
+            content: "-";
+        }
+    }
+
+    img {
+        height: 250px;
+        width: 100%;
+        max-width: 250px;
+        margin: auto;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    .rating {
+        color: #c2c2c2;
+    }
+
+    .rating .active {
+        color: #f3af41;
+    }
+}
+
+.overlay {
+    position: absolute;
+    background-color: rgba(83, 204, 215, 0.5);
+    height: 250px;
+    width: calc(100% - 16px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.custom-carousel-indicators {
+    top: 235px !important;
+    right: 41% !important;
+
+    .custom-carousel-indicators-primary {
+        width: 70px !important;
+        height: 70px !important;
+        opacity: 1 !important;
+        border: 2px solid #DDDDDB !important;
+        margin: 0 2.5px !important;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: #de952f !important;
+        }
+    }
+
+    .custom-carousel-indicators-primary.active {
+        border: 2px solid #de952f !important;
+    }
+
 }

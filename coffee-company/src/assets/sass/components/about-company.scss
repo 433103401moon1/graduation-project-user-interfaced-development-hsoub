@@ -1,0 +1,164 @@
+@use '../config/variables' as *;
+
+.c-about-company {
+
+    #about-company {
+        h2 {
+            color: $color-brand;
+        }
+
+        .lead {
+            font-size: 1.2rem;
+            line-height: 2;
+        }
+
+        .shadow-sm {
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+
+        .btn-outline-dark {
+            font-weight: bold;
+            border-radius: 30px;
+            color: $color-brand;
+            border-color: $color-brand;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: $color-white;
+                background-color: $color-brand;
+            }
+        }
+    }
+
+    #company-history {
+        padding: 100px 0 50px 0;
+        color: $color-brand;
+        background-color: $color-grey-light;
+
+        .line {
+            width: 100px;
+            height: 2px;
+            background-color: $color-brand;
+
+            &::before {
+                position: absolute;
+                display: block;
+                content: '';
+                width: 2px;
+                height: 500px;
+                background-color: $color-brand;
+                top: 0;
+                right: 49px;
+            }
+        }
+
+        .company-history-card-start {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                display: inline-block;
+                content: '';
+                border: 15px solid $color-white;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+                top: 17px;
+                left: -27px;
+            }
+
+            &::after {
+                position: absolute;
+                display: inline-block;
+                content: '';
+                width: 10px;
+                height: 10px;
+                background-color: $color-brand;
+                border-radius: 50%;
+                top: 26px;
+                left: -29.5px;
+                z-index: 1;
+            }
+        }
+
+        .company-history-card-end {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                display: inline-block;
+                content: '';
+                border: 15px solid $color-white;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+                border-right-color: transparent;
+                top: 17px;
+                right: -27px;
+            }
+
+            &::after {
+                position: absolute;
+                display: inline-block;
+                content: '';
+                width: 10px;
+                height: 10px;
+                background-color: $color-brand;
+                border-radius: 50%;
+                top: 26px;
+                right: -29px;
+                z-index: 1;
+            }
+        }
+
+        .date {
+            background-color: $color-brand;
+        }
+
+        .text-secondary {
+            color: $color-content !important;
+        }
+
+        .text-body {
+            color: $color-grey !important;
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 991.5px) {
+        #company-history {
+            padding: 220px 0 50px 0;
+
+            .row:first-child {
+                margin-bottom: 50px !important;
+            }
+
+            .company-history-card-start,
+            .company-history-card-end {
+                margin: 0 !important;
+            }
+
+            .company-history-card-start::after,
+            .company-history-card-start::before,
+            .company-history-card-end::after,
+            .company-history-card-end::before {
+                display: none;
+            }
+
+            .line::before {
+                height: 650px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        #company-history {
+            padding: 280px 0 50px 0;
+        }
+    }
+
+
+}

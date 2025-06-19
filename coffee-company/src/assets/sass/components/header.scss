@@ -1,0 +1,36 @@
+@use "../config/variables" as *;
+
+.c-header {
+    margin-bottom: 55px;
+
+    .container {
+        margin: 0px auto;
+    }
+
+    .navbar {
+        background-color: $color-white;
+        box-shadow:
+            0 2px 4px rgba(0, 0, 0, 0.05),
+            0 4px 8px rgba(0, 0, 0, 0.03);
+
+        &-brand {
+            color: $color-brand !important;
+            font-size: 28px;
+        }
+
+        .nav-link {
+            color: $color-content !important;
+            font-size: 18px;
+            margin-left: 20px;
+            transition: all 0.3s;
+
+            &:hover {
+                color: $color-brand !important;
+            }
+        }
+
+        i {
+            color: $color-brand;
+        }
+    }
+}
