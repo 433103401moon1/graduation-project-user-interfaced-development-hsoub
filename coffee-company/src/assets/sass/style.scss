@@ -1,3 +1,4 @@
+@use './config/variables' as *;
 @forward './config/variables';
 
 @forward 'base/fonts';
@@ -6,3 +7,27 @@
 @forward 'utilites/spacing';
 
 @forward 'components/components';
+
+#services {
+    .feature-card {
+        background-color: $color-brand;
+
+        .fa-2x {
+            color: $color-white;
+        }
+
+        h5 {
+            color: $color-white;
+        }
+
+        p {
+            color: $color-grey-light
+        }
+    }
+
+}
+
+#product-us-home {
+    margin-bottom: 70px;
+}
+

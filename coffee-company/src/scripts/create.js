@@ -13,7 +13,7 @@ fs.readFile( "./src/components/template.html", "utf8", (err, source) => {
             fs.writeFile( `./src/assets/sass/components/${component}.scss`, '', (err) => {
                 if ( err )  return console.error(`there is a problem in creating ${component}.sass`);
                 console.log(`${component} created successfully!`);
-                fs.appendFile(`./src/assets/sass/components/_components.scss`, `@import "${component}";\n`, (err) => {
+                fs.appendFile(`./src/assets/sass/components/_components.scss`, `@forward "${component}";\n`, (err) => {
                     if ( err )  return console.error(`there is a problem in appending ${component}.sass`);
                     console.log(`${component} appended successfully!`);
                     exec(`code -r ./src/components/${component}.html`, (err) => {

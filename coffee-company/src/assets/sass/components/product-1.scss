@@ -1,0 +1,122 @@
+@use '../config/variables' as *;
+
+.c-product-1 {
+    .custom-carousel-indicators {
+        img {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background-color: $color-white;
+            border: 1px solid $color-white;
+            top: 50px !important;
+            right: 25% !important;
+
+            &.active {
+                background-color: $color-brand;
+                border-color: $color-brand;
+            }
+        }
+
+    }
+
+    .brand {
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .custom-breadcrumb {
+        padding: 25px 0;
+
+        a {
+            color: #555;
+            text-decoration: none;
+
+            &:hover {
+                color: #F8AD47;
+            }
+        }
+
+        >li::before {
+            color: #F8AD47 !important;
+        }
+
+        .active {
+            color: #bfbfbf;
+        }
+    }
+
+    .product-category {
+        color: #A9A9A9;
+    }
+
+    #form-product-selection h2 {
+        font-weight: 700;
+        margin: 18px 0;
+    }
+
+    .borders-between>div+div {
+        border-top: 1px solid #EBEBEB;
+        padding: 15px 0;
+    }
+
+    .product-quantity select {
+        height: 34px !important;
+        padding: 6px 12px;
+        margin-right: 5px;
+    }
+
+    .custom-btn-with-icon {
+        margin: 15px 0;
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+
+    .heading-with-border-bottom {
+        border-bottom: 1px solid #EBEBEB;
+        padding-bottom: 15px;
+    }
+
+    .heading-inline {
+        display: inline-block;
+        min-width: 250px;
+    }
+
+    .more-description p,
+    .more-description ul {
+        margin-bottom: 10px;
+    }
+
+    .comments {
+
+        .comment {
+            img {
+                width: 80px;
+                height: 80px;
+                margin-left: 10px;
+                border: 1px solid #dfdfdf;
+            }
+
+            h4 {
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    #carousel-product-images {
+        .carousel-indicators {
+            position: absolute !important;
+            top: 92% !important;
+            right: 0 !important;
+        }
+
+        .carousel-item img {
+            width: 100% !important;
+            height: auto !important;
+            border: 1px solid #EBEBEB !important;
+        }
+    }
+
+}

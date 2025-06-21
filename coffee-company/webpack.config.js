@@ -51,30 +51,19 @@ module.exports = {
         ],
       },
       {
-        test: /\.(svg|png|jpg)$/,
-        exclude: /fonts/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-              outputPath: "assets/images",
-            },
-          },
-        ],
+        test: /\.(png|jpe?g|svg|gif|webp)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/images/[name][ext]",
+        },
       },
       {
         test: /\.(svg|eot|woff|woff2|ttf)$/,
+        type: "asset/resource",
         exclude: /images/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-              outputPath: "assets/fonts",
-            },
-          },
-        ],
+        generator: {
+          filename: "assets/fonts/[name][ext]",
+        },
       },
     ],
   },
@@ -95,6 +84,18 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "distributors.html",
       template: "./src/distributors.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "product-1.html",
+      template: "./src/product-1.html",
+    }),
+        new HtmlWebpackPlugin({
+      filename: "product-2.html",
+      template: "./src/product-2.html",
+    }),
+        new HtmlWebpackPlugin({
+      filename: "product-3.html",
+      template: "./src/product-3.html",
     }),
     new MiniCssExtractPlugin({
       filename: "assets/css/style.css",
@@ -119,6 +120,18 @@ module.exports = {
       filename: "components/distributors.html",
       template: "./src/components/distributors.html",
     }),
+    new HtmlWebpackPlugin({
+      filename: "components/product-1.html",
+      template: "./src/components/product-1.html",
+    }),
+        new HtmlWebpackPlugin({
+      filename: "components/product-2.html",
+      template: "./src/components/product-2.html",
+    }),
+        new HtmlWebpackPlugin({
+      filename: "components/product-3.html",
+      template: "./src/components/product-3.html",
+    }),
     new HtmlWebpackPartialsPlugin([
       {
         path: path.join(__dirname, "./src/components/header.html"),
@@ -128,6 +141,9 @@ module.exports = {
           "contact-us.html",
           "about-company.html",
           "distributors.html",
+          "product-1.html",
+          "product-2.html",
+          "product-3.html",
         ],
       },
     ]),
@@ -140,6 +156,9 @@ module.exports = {
           "contact-us.html",
           "about-company.html",
           "distributors.html",
+          "product-1.html",
+          "product-2.html",
+          "product-3.html",
         ],
       },
     ]),
@@ -162,6 +181,27 @@ module.exports = {
         path: path.join(__dirname, "./src/components/distributors.html"),
         location: "c-distributors",
         template_filename: ["distributors.html"],
+      },
+    ]),
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, "./src/components/product-1.html"),
+        location: "c-product-1",
+        template_filename: ["product-1.html"],
+      },
+    ]),
+        new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, "./src/components/product-2.html"),
+        location: "c-product-2",
+        template_filename: ["product-2.html"],
+      },
+    ]),
+        new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, "./src/components/product-3.html"),
+        location: "c-product-3",
+        template_filename: ["product-3.html"],
       },
     ]),
   ],
