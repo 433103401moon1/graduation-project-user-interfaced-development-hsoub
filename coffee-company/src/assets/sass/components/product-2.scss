@@ -1,7 +1,9 @@
 @use '../config/variables' as *;
+@use '../utilites/product-mixins' as *;
 
 .c-product-2 {
 
+    @include product-style(#f0fff4, #2e5939, #91c788, #fff);
 
     .custom-carousel-indicators {
 

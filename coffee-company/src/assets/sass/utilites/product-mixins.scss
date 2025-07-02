@@ -1,0 +1,23 @@
+@use "sass:color";
+
+@mixin product-style($bg, $color, $bg-button, $color-button)  {
+    background-color: $bg !important;
+    color: $color !important;
+    button {
+        background-color: $bg-button !important;
+        color: $color-button !important;
+        border: 1px solid $bg-button !important;
+
+        &:hover {
+            background-color: color.adjust($bg-button, $lightness: -10%) !important;
+            color: $color !important;
+            border-color: color.adjust($bg-button, $lightness: -10%) !important;
+        }
+    }
+
+    .price {
+        font-size: 1.5rem;
+        color: color.adjust($color, $lightness: -15%) !important;
+    }
+
+}

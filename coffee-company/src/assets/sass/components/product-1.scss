@@ -1,6 +1,9 @@
 @use '../config/variables' as *;
+@use '../utilites/product-mixins' as *;
 
 .c-product-1 {
+    @include product-style(#f4f1ea, #4b2e2b, #a9746e, #fff);
+
     .custom-carousel-indicators {
         img {
             position: relative;
@@ -118,5 +121,4 @@
             border: 1px solid #EBEBEB !important;
         }
     }
-
 }
